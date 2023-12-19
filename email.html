@@ -82,15 +82,16 @@
         }
 
         .resend span {
-            color : var(--very-light-pink);
+            color: var(--very-light-pink);
         }
 
         .resend a {
-            color : var(--hospital-green);
+            color: var(--hospital-green);
             text-decoration: none;
         }
 
-        .primary-button {
+        a.primary-button {
+            display: inline-block;
             background-color: var(--hospital-green);
             border: none;
             border-radius: 8px;
@@ -100,14 +101,27 @@
             font-size: var(--md);
             color: var(--white);
             font-weight: bold;
+            text-decoration: none;
+            /* Remove underline for links */
+            text-align: center;
+            /* Center text within the link */
+            line-height: 48px;
+            /* Vertical alignment */
             margin-top: 16px;
             margin-bottom: 32px;
+        }
+
+        a.primary-button:hover {
+            background-color: #0056b3;
+            /* Adjust hover background color if needed */
+            /* You can adjust the hover styles as needed */
         }
 
         @media (max-width: 720px) {
             nav {
                 display: none;
             }
+
             .form-container {
                 width: 60%;
             }
@@ -116,6 +130,7 @@
                 display: block;
             }
         }
+
         @media (min-width: 720px) {
             nav {
                 display: flex;
@@ -125,20 +140,25 @@
                 border-bottom: 1px solid var(--very-light-pink);
                 box-shadow: 0 2px 4px var(--very-light-pink);
             }
+
             .menu {
                 display: none;
             }
+
             .logo {
                 width: 100px;
             }
+
             .navbar-left {
                 display: flex;
                 align-items: center;
             }
+
             .navbar-left ul {
                 margin-left: 12px;
             }
-            .navbar-left ul ,
+
+            .navbar-left ul,
             .navbar-right ul {
                 list-style: none;
                 padding: 0;
@@ -147,6 +167,7 @@
                 align-items: center;
                 height: 60px;
             }
+
             .navbar-left ul li a,
             .navbar-right ul li a {
                 text-decoration: none;
@@ -155,19 +176,23 @@
                 padding: 8px;
                 border-radius: 8px;
             }
+
             .navbar-left ul li a:hover,
             .navbar-right ul li a:hover {
                 color: var(--hospital-green);
                 border: 1px solid var(--hospital-green);
             }
+
             .navbar-email {
                 color: var(--very-light-pink);
                 font-size: var(--sm);
             }
+
             .navbar-shopping-cart {
                 position: relative;
                 margin-left: 24px;
             }
+
             .navbar-shopping-cart div {
                 width: 16px;
                 height: 16px;
@@ -222,13 +247,13 @@
                 <img src="./Icons/email.svg" alt="email" class="email">
             </div>
 
-            <button class="primary-button login-button">
-                Login
-            </button>
+            <a class="primary-button login-button" href="/create-account.html">
+                [Test] Next Page
+            </a>
 
             <p class="resend">
                 <span>
-                    Dind't receive an email? 
+                    Dind't receive an email?
                     <a href="/">Resend</a>
                 </span>
             </p>

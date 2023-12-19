@@ -22,6 +22,7 @@
             margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -30,20 +31,25 @@
             border-bottom: 1px solid var(--very-light-pink);
             box-shadow: 0 2px 4px var(--very-light-pink);
         }
+
         .menu {
             display: none;
         }
+
         .logo {
             width: 100px;
         }
+
         .navbar-left {
             display: flex;
             align-items: center;
         }
+
         .navbar-left ul {
             margin-left: 12px;
         }
-        .navbar-left ul ,
+
+        .navbar-left ul,
         .navbar-right ul {
             list-style: none;
             padding: 0;
@@ -52,6 +58,7 @@
             align-items: center;
             height: 60px;
         }
+
         .navbar-left ul li a,
         .navbar-right ul li a {
             text-decoration: none;
@@ -60,19 +67,23 @@
             padding: 8px;
             border-radius: 8px;
         }
+
         .navbar-left ul li a:hover,
         .navbar-right ul li a:hover {
             color: var(--hospital-green);
             border: 1px solid var(--hospital-green);
         }
+
         .navbar-email {
             color: var(--very-light-pink);
             font-size: var(--sm);
         }
+
         .navbar-shopping-cart {
             position: relative;
             margin-left: 24px;
         }
+
         .navbar-shopping-cart div {
             width: 16px;
             height: 16px;
@@ -87,6 +98,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .login {
             width: 100%;
             height: 90vh;
@@ -133,13 +145,14 @@
             margin-bottom: 12px;
         }
 
-        .input-name , 
-        .input-email , 
+        .input-name,
+        .input-email,
         .input-password {
             margin-bottom: 24px;
         }
 
-        .primary-button {
+        a.primary-button {
+            display: inline-block;
             background-color: var(--hospital-green);
             border: none;
             border-radius: 8px;
@@ -149,20 +162,35 @@
             font-size: var(--md);
             color: var(--white);
             font-weight: bold;
+            text-decoration: none;
+            /* Remove underline for links */
+            text-align: center;
+            /* Center text within the link */
+            line-height: 48px;
+            /* Vertical alignment */
             margin-top: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 32px;
+        }
+
+        a.primary-button:hover {
+            background-color: #0056b3;
+            /* Adjust hover background color if needed */
+            /* You can adjust the hover styles as needed */
         }
 
         @media (max-width: 720px) {
             .menu {
                 display: block;
             }
+
             .navbar-left ul {
                 display: none;
             }
+
             .navbar-email {
                 display: none;
             }
+
             .form-container {
                 width: 60%;
                 height: 100%;
@@ -213,15 +241,15 @@
 
             <form action="/" class="form">
                 <div>
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="John Doe" class="input input-name">
-                <label for="email">Email address</label>
-                <input type="email" id="email" placeholder="jhondoe@gmail.com" class="input input-email">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="*********" class="input input-password">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="John Doe" class="input input-name">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="jhondoe@gmail.com" class="input input-email">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="*********" class="input input-password">
                 </div>
 
-                <input type="submit" value="Create" class="primary-button login-button">
+                <a class="primary-button login-button" href="store.html">[Test] Next Page</a>
             </form>
         </div>
     </div>
