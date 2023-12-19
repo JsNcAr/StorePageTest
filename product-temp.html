@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+            rel="stylesheet">
+        <title>Produt</title>
+        <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --sm: 12px;
+            --md: 16px;
+            --lg: 24px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
+            box-shadow: 0 2px 4px var(--very-light-pink);
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover {
+            color: var(--hospital-green);
+            border: 1px solid var(--hospital-green);
+        }
+
+        .navbar-email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+        }
+
+        .navbar-shopping-cart {
+            position: relative;
+            margin-left: 24px;
+        }
+
+        .navbar-shopping-cart div {
+            width: 16px;
+            height: 16px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        aside {
+            margin-top: 12px;
+            margin-right: 12px;
+        }
+        .product-detail {
+            width: 360px;
+            padding-bottom: 24px;
+            position: relative;
+            right: 0;
+            z-index: 1;
+        }
+        .product-detail-close {
+            background: var(--white);
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 2;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .product-detail-close:hover {
+            cursor: pointer;
+        }
+
+        .product-detail>img:nth-child(2) {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .product-info {
+            margin: 24px 24px 0 24px;
+        }
+        .product-info p:nth-child(1) {
+            font-size: var(--md);
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info p:nth-child(2) {
+            font-size: var(--md);
+            color: var(--very-light-pink);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .product-info p:nth-child(3) {
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .primary-button {
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: 8px;
+            height: 48px;
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            color: var(--white);
+            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 32px;
+        }
+
+        .add-to-cart-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: block;
+            }
+
+            .navbar-left ul {
+                display: none;
+            }
+
+            .navbar-email {
+                display: none;
+            }
+            .product-detail {
+                width: 90%;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+        <nav>
+            <img src="Icons/icon_menu.svg" alt="menu" class="menu">
+            <div class="navbar-left">
+                <img src="Logos/logo_yard_sale.svg" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Furnitures</a></li>
+                    <li><a href="#">Toys</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li class="navbar-email">jhondoe@gmail.com</li>
+                    <li class="navbar-shopping-cart">
+                        <img src="Icons/icon_shopping_cart.svg"
+                            alt="shopping-cart">
+                        <div>2</div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <aside class="product-detail">
+            <div class="produt-detail-close">
+                <img src="Icons/icon_close.png" alt="close">
+            </div>
+            <img src="pexels-photo-276517.jpeg" alt="Bike">
+            <div class="product-info">
+                <p>$35.00</p>
+                <p>Bike</p>
+                <p>An used bike with 2 wheels, in good condition.</p>
+                <button class="primary-button add-to-cart-button">
+                    <img src="Icons/bt_add_to_cart.svg" alt="add to cart">
+                    Add to cart
+                </button>
+            </div>
+        </aside>
+    </body>
+
+</html>
